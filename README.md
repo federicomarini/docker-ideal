@@ -1,4 +1,4 @@
-# docker-ideal
+# `ideal` Docker - The Docker container for Interactive Differential Expression AnaLysis in RNA-seq data 
 
 # usage
 
