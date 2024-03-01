@@ -17,7 +17,8 @@ if((input_folder == '' || !dir.exists(input_folder))) {
     shiny::runApp(app_ideal, launch.browser = FALSE, port = 3838, host = "0.0.0.0")
   } else {
     dds_obj <- readRDS(dds_obj_path)
-    ideal(dds_obj = dds, launch.browser = FALSE, port = 3838, host = "0.0.0.0")
+    app_ideal <- ideal(dds_obj = dds_obj)
+    shiny::runApp(app_ideal, launch.browser = FALSE, port = 3838, host = "0.0.0.0")
   }
 }
 
