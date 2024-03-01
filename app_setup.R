@@ -3,9 +3,6 @@ library("ideal")
 input_folder <- Sys.getenv("SHINY_INPUT_DIR")
 output_folder <- Sys.getenv("SHINY_OUTPUT_DIR")
 
-print(input_folder)
-print(output_folder)
-
 if((input_folder == '' || !dir.exists(input_folder))) {
   
   # run "as server", basically without dataset specified
@@ -37,7 +34,7 @@ if(exists("ideal_env")) {
       saveRDS(ideal_env_list[[1]], file = file.path(output_folder, "ideal_env_inputvalues.RDS"))
       saveRDS(ideal_env_list[[2]], file = file.path(output_folder, "ideal_env_reactivevalues.RDS"))
       
-      message('WE SAVED IT in ', file.path(output_folder, "ideal_env_inputvalues.RDS"))
+      message('We saved it in ', file.path(output_folder, "ideal_env_inputvalues.RDS"))
     }
   } else {
     # do something to force closing (?) 
